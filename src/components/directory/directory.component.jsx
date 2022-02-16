@@ -15,11 +15,13 @@ class Directory extends React.Component {
 					imageUrl:
 						'https://www.footshop.ro/blog/wp-content/uploads/2021/05/Webp.net-compress-image-6.jpg',
 					id: 1,
+					linkUrl: 'hats',
 				},
 				{
 					title: 'jackets',
 					imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
 					id: 2,
+					linkUrl: '',
 				},
 				{
 					title: 'sneakers',
@@ -32,6 +34,7 @@ class Directory extends React.Component {
 					imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
 					size: 'large',
 					id: 4,
+					linkUrl: '',
 				},
 				{
 					title: 'mens',
@@ -39,6 +42,7 @@ class Directory extends React.Component {
 						'https://img.acunn.com/uploads/icerikler/2020/02/16/16115745515e49435d1191e.jpg',
 					size: 'large',
 					id: 5,
+					linkUrl: '',
 				},
 			],
 		};
@@ -47,8 +51,8 @@ class Directory extends React.Component {
 	render() {
 		return (
 			<div className="directory-menu">
-				{this.state.sections.map(({ title, imageUrl, id, size }) => (
-					<MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+				{this.state.sections.map(({ id, ...otherSectionProps }) => (
+					<MenuItem key={id} {...otherSectionProps} />
 				))}
 			</div>
 		);
