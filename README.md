@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Crwn Clothing
+A ecommerce website that sells the latest in fashion clothes. This website is built using React and Redux Sagas. It takes advantages of React Hooks to create pure functions as well as other performance enhancers. You can even go through the checkout process (please use the fact credit card)
 
 ## Available Scripts
 
