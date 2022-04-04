@@ -1,21 +1,23 @@
-import React from 'react';
+// import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 
-import HomePage from './pages/homepage/homepage.component';
+import Home from './components/routes/home/home.component';
 import ShopPage from './pages/shop/shop.components';
-import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-import Header from './components/header/header.component';
+// import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
+import Navigation from './components/routes/navigation/navigation.component.jsx';
+import SignIn from './components/routes/sign-in/sign-in.component';
 
 function App() {
 	return (
 		<div>
-			<Header />
+			<Navigation />
 			<Routes>
-				<Route exact path="/" element={<HomePage />} />
-				<Route path="/shop" element={<ShopPage />} />
-				<Route path="/signin" element={<SignInAndSignUpPage />} />
+				<Route exact path="/" element={<Home />}>
+					<Route path="/shop" element={<ShopPage />} />
+					<Route path="/sign-in" element={<SignIn />} />
+				</Route>
 			</Routes>
 		</div>
 	);
